@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-11-03T07:54:35.867Z",
+  "data": {
+    "schemaVersion": 1,
+    "buckets": [
+      {
+        "id": "inbox",
+        "name": "Inbox",
+        "color": "#78716c",
+        "order": 0,
+        "isInbox": true
+      },
+      {
+        "id": "quic",
+        "name": "QUIC",
+        "color": "#3b82f6",
+        "order": 1
+      },
+      {
+        "id": "reading",
+        "name": "Reading",
+        "color": "#8b5cf6",
+        "order": 2
+      },
+      {
+        "id": "admin",
+        "name": "Admin",
+        "color": "#f59e0b",
+        "order": 3
+      },
+      {
+        "id": "personal",
+        "name": "Personal",
+        "color": "#10b981",
+        "order": 4
+      }
+    ],
+    "tasks": [
+      {
+        "id": "t-read-rfc9000",
+        "title": "Read QUIC RFC 9000 — transport fundamentals",
+        "description": "Sections 1–5: packets, frames, connection IDs. Take notes on TODO interactions.",
+        "bucketId": "reading",
+        "dueDate": "2026-11-01",
+        "estimatePomodoros": 3,
+        "pinnedToday": true,
+        "order": 1,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-todo-frame",
+        "title": "Add TODO frame handling to the QUIC stack",
+        "description": "Parse, validate, and acknowledge TODO frames in the send and receive paths.",
+        "bucketId": "quic",
+        "dueDate": "2026-11-02",
+        "estimatePomodoros": 5,
+        "pinnedToday": true,
+        "order": 2,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-implement-tod",
+        "title": "Implement TOD in QUIC",
+        "description": "Finish the TOD state machine and wire it into the connection loop. Keep the API transport-agnostic.",
+        "bucketId": "quic",
+        "dueDate": "2026-11-03",
+        "estimatePomodoros": 4,
+        "pinnedToday": true,
+        "order": 3,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-rfc9002",
+        "title": "Read RFC 9002 — loss detection and congestion control",
+        "description": "Focus on the pseudocode for loss timers and persistent congestion.",
+        "bucketId": "reading",
+        "dueDate": "2026-11-03",
+        "estimatePomodoros": 3,
+        "pinnedToday": true,
+        "order": 4,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-review-0rtt",
+        "title": "Review the 0-RTT integration test PR",
+        "description": "Check replay handling and the new test fixtures.",
+        "bucketId": "quic",
+        "dueDate": "2026-11-03",
+        "estimatePomodoros": 1,
+        "pinnedToday": true,
+        "order": 5,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-priority-tests",
+        "title": "Write stream prioritization tests",
+        "description": "Cover equal priority, starvation, and dynamic reprioritization.",
+        "bucketId": "quic",
+        "dueDate": "2026-11-04",
+        "estimatePomodoros": 2,
+        "pinnedToday": false,
+        "order": 6,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-rfc9114",
+        "title": "Read RFC 9114 — HTTP/3",
+        "description": "Skim the framing changes, then go deep on server push removal.",
+        "bucketId": "reading",
+        "dueDate": "2026-11-05",
+        "estimatePomodoros": 3,
+        "pinnedToday": false,
+        "order": 7,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-tod-design",
+        "title": "Draft the TOD design note",
+        "description": "One page: problem, wire format, failure modes, migration story.",
+        "bucketId": "quic",
+        "dueDate": "2026-11-06",
+        "estimatePomodoros": 2,
+        "pinnedToday": false,
+        "order": 8,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-transport-docs",
+        "title": "Update transport parameter docs",
+        "description": "New TOD parameter plus a small table of defaults.",
+        "bucketId": "admin",
+        "dueDate": "2026-11-08",
+        "estimatePomodoros": 1,
+        "pinnedToday": false,
+        "order": 9,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-profile-hotpath",
+        "title": "Profile the packet processing hot path",
+        "description": "Find where the extra TODO check costs us. Target < 2%.",
+        "bucketId": "quic",
+        "dueDate": "2026-11-10",
+        "estimatePomodoros": 3,
+        "pinnedToday": false,
+        "order": 10,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-blog-post",
+        "title": "Sketch a blog post: what TOD actually buys you",
+        "description": "Start with the user-visible win, not the frame layout.",
+        "bucketId": "quic",
+        "estimatePomodoros": 2,
+        "pinnedToday": true,
+        "order": 11,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-branch-stack",
+        "title": "Clean up the local branch stack",
+        "description": "Rebase, squash, and drop the experiments that went nowhere.",
+        "bucketId": "admin",
+        "estimatePomodoros": 1,
+        "pinnedToday": true,
+        "order": 12,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-coffee",
+        "title": "Buy coffee beans",
+        "description": "The good ones, not the supermarket bag.",
+        "bucketId": "personal",
+        "estimatePomodoros": 1,
+        "pinnedToday": true,
+        "order": 13,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-conference-cfp",
+        "title": "Reply to the conference CFP email",
+        "description": "Propose the TOD talk. Two sentences is enough.",
+        "bucketId": "admin",
+        "estimatePomodoros": 1,
+        "pinnedToday": true,
+        "order": 14,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-test-harness",
+        "title": "Set up the QUIC test harness",
+        "description": "Deterministic time, packet capture, and a fake lossy network.",
+        "bucketId": "quic",
+        "estimatePomodoros": 2,
+        "pinnedToday": true,
+        "completedAt": "2026-11-03T05:24:35.867Z",
+        "order": 15,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-read-rfc9001",
+        "title": "Read RFC 9001 — TLS for QUIC",
+        "description": "Certificate verification and the handshake state machine.",
+        "bucketId": "reading",
+        "estimatePomodoros": 2,
+        "pinnedToday": true,
+        "completedAt": "2026-11-03T06:54:35.867Z",
+        "order": 16,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      },
+      {
+        "id": "t-stateless-reset",
+        "title": "Fix the stateless reset edge case",
+        "description": "Reset tokens were compared before the connection ID length check.",
+        "bucketId": "quic",
+        "estimatePomodoros": 2,
+        "pinnedToday": true,
+        "completedAt": "2026-11-03T07:49:35.867Z",
+        "order": 17,
+        "createdAt": "2026-10-31T07:54:35.867Z"
+      }
+    ],
+    "sessions": [
+      {
+        "id": "s-tod-progress",
+        "taskId": "t-implement-tod",
+        "kind": "focus",
+        "startedAt": "2026-11-03T05:49:35.867Z",
+        "endedAt": "2026-11-03T06:14:35.867Z",
+        "plannedMs": 1500000,
+        "focusMs": 1500000,
+        "pausedMs": 0,
+        "outcome": "completed",
+        "day": "2026-11-03"
+      },
+      {
+        "id": "s-read-rfc9001",
+        "taskId": "t-read-rfc9001",
+        "kind": "focus",
+        "startedAt": "2026-11-03T06:26:35.867Z",
+        "endedAt": "2026-11-03T06:51:35.867Z",
+        "plannedMs": 1500000,
+        "focusMs": 1500000,
+        "pausedMs": 0,
+        "outcome": "completed",
+        "day": "2026-11-03"
+      },
+      {
+        "id": "s-stateless-reset",
+        "taskId": "t-stateless-reset",
+        "kind": "focus",
+        "startedAt": "2026-11-03T07:21:35.867Z",
+        "endedAt": "2026-11-03T07:46:35.867Z",
+        "plannedMs": 1500000,
+        "focusMs": 1500000,
+        "pausedMs": 0,
+        "outcome": "completed",
+        "day": "2026-11-03"
+      },
+      {
+        "id": "s-tod-cancelled",
+        "taskId": "t-implement-tod",
+        "kind": "focus",
+        "startedAt": "2026-11-03T06:56:35.867Z",
+        "endedAt": "2026-11-03T07:08:35.867Z",
+        "plannedMs": 1500000,
+        "focusMs": 720000,
+        "pausedMs": 0,
+        "outcome": "cancelled",
+        "day": "2026-11-03"
+      },
+      {
+        "id": "s-test-harness",
+        "taskId": "t-test-harness",
+        "kind": "focus",
+        "startedAt": "2026-11-03T04:56:35.867Z",
+        "endedAt": "2026-11-03T05:21:35.867Z",
+        "plannedMs": 1500000,
+        "focusMs": 1500000,
+        "pausedMs": 0,
+        "outcome": "completed",
+        "day": "2026-11-03"
+      }
+    ],
+    "settings": {
+      "focusMinutes": 25,
+      "shortBreakMinutes": 5,
+      "longBreakMinutes": 15,
+      "longBreakEvery": 4,
+      "autoStartBreaks": false,
+      "autoStartFocus": false,
+      "soundEnabled": true,
+      "volume": 0.7,
+      "notificationsEnabled": false
+    }
+  }
+}
