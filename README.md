@@ -2,6 +2,10 @@
 
 **Your day, undivided.**
 
+[**Live demo**](https://adwait-app.netlify.app) · [Source on GitHub](https://github.com/ShrikantJadhav/Adwait)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ShrikantJadhav/Adwait)
+
 Adwait is a single-pane productivity app: today's tasks on the left, a pomodoro timer on the right. Tasks are color-coded by whether they're on track, and every focus session is logged against the day — and optionally against a task.
 
 The name comes from Sanskrit *advaita* (अद्वैत), “not two” — the work and the time spent on it are one.
@@ -64,10 +68,11 @@ Corrupt saved data is quarantined under `adwait:corrupt:<timestamp>` rather than
 ## Demo data
 
 [`demo/adwait-demo.json`](./demo/adwait-demo.json) is an importable backup with
-QUIC-flavoured tasks, five buckets, completed tasks, and focus sessions. Export
-your current data first, then use **Import** — importing replaces everything.
-Dates are relative, so run `npm run demo` after a while to refresh them before
-taking screenshots. See [`demo/README.md`](./demo/README.md).
+QUIC-flavoured tasks, five buckets, completed tasks, and focus sessions. The
+hosted demo starts empty, so import this file to see the screenshots above in
+action. Export your current data first, then use **Import** — importing replaces
+everything. Dates are relative, so run `npm run demo` after a while to refresh
+them before taking screenshots. See [`demo/README.md`](./demo/README.md).
 
 ## Stack
 

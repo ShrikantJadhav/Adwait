@@ -4,6 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Your day, undivided. Tasks and time in one pane.",
+  "homepage": "https://adwait-app.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShrikantJadhav/Adwait.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
