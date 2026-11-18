@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafaf9" />
+    <title>Local-First Task Manager — Your Data Stays in Your Browser | Adwait</title>
+    <meta
+      name="description"
+      content="What local-first actually means for a task manager: no account, no server, data in your browser, and JSON backups you control. Adwait is a local-first task list with a built-in pomodoro timer."
+    />
+    <link rel="canonical" href="https://adwait-app.netlify.app/local-first-task-manager/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://adwait-app.netlify.app/local-first-task-manager/" />
+    <meta property="og:title" content="A local-first task manager, and what that actually means" />
+    <meta
+      property="og:description"
+      content="No account, no server: tasks and focus sessions live in your browser, and export is the escape hatch."
+    />
+    <meta property="og:image" content="https://adwait-app.netlify.app/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍅</text></svg>"
+    />
+    <link rel="stylesheet" href="/landing.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">अ</span>
+          <span class="brand-name">Adwait<span class="brand-tag">Your day, undivided.</span></span>
+        </a>
+        <a class="nav-link" href="/?utm_source=site&amp;utm_medium=nav&amp;utm_campaign=local-first">Open the app →</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <p class="eyebrow">Local-first</p>
+      <h1>A local-first task manager, and what that actually means</h1>
+      <p class="lede">
+        "Local-first" gets used as decoration. Here it means something specific:
+        the only copy of your task list is on your machine, the app works without
+        a network request, and you can leave with all of your data at any time.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="/?utm_source=site&amp;utm_medium=cta&amp;utm_campaign=local-first">Open Adwait — free</a>
+        <span class="note">Runs entirely in the browser.</span>
+      </div>
+
+      <h2>What "local-first" means in Adwait</h2>
+      <p>
+        There is no backend. Adwait is a static application; once the page has
+        loaded, nothing it does requires a server. Tasks, buckets, completed
+        sessions, and the active timer are written to
+        <code>localStorage</code> under a single key (<code>adwait:v1</code>).
+      </p>
+      <p>
+        That has three practical consequences:
+      </p>
+      <ul>
+        <li><strong>No account.</strong> There's no user record to create, so there's no login, password, or verification email.</li>
+        <li><strong>No data plane.</strong> Your tasks aren't uploaded, mirrored, or analysed. There is no "our servers" for them to sit on.</li>
+        <li><strong>No lock-in.</strong> Export writes a plain JSON file with every task, bucket, and session. Import reads it back.</li>
+      </ul>
+
+      <h2>What a server would have given you</h2>
+      <p>
+        Being honest about the trade: a cloud task manager gives you automatic
+        sync across devices, a mobile app with push reminders, sharing, and the
+        guarantee that a dead laptop doesn't lose your list. Adwait gives you
+        none of that by design.
+      </p>
+      <p>
+        For a single person working on one machine, those features are often
+        overhead — a login screen, a sync conflict, a subscription. For someone
+        coordinating a team or living on a phone, they're essential. The point
+        isn't that local-first is universally better; it's that it should be a
+        choice rather than the only option on the shelf.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Concern</th>
+            <th scope="col">Adwait</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Where tasks live</td>
+            <td>Your browser's local storage — one machine, one browser profile</td>
+          </tr>
+          <tr>
+            <td>Account required</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Works offline</td>
+            <td>Yes, once the page is loaded</td>
+          </tr>
+          <tr>
+            <td>Backup</td>
+            <td>Manual JSON export from the header</td>
+          </tr>
+          <tr>
+            <td>Sync between devices</td>
+            <td>No — export on one, import on the other</td>
+          </tr>
+          <tr>
+            <td>Clearing site data</td>
+            <td>Erases your tasks, unless you exported first</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card">
+        <h2>If you're going to rely on it</h2>
+        <p>
+          Export a backup on a schedule you'd actually keep — end of the week is
+          usually enough. The export is a single JSON file named
+          <code>adwait-backup-YYYY-MM-DD.json</code>, readable in any text editor,
+          and importable on any browser. If you store it in a synced folder,
+          you've effectively built the sync you were missing.
+        </p>
+      </div>
+
+      <h2>How corruption is handled</h2>
+      <p>
+        If the saved data can't be parsed — a half-written write, an extension
+        interfering — Adwait doesn't crash into a blank screen. It moves the
+        unreadable payload aside under a
+        <code>adwait:corrupt:&lt;timestamp&gt;</code> key and starts clean, so the
+        broken data is still recoverable by hand.
+      </p>
+
+      <h2>Keep reading</h2>
+      <ul>
+        <li><a href="/pomodoro-without-signup/">A pomodoro timer with no signup</a></li>
+        <li><a href="/pomodoro-and-todo-list-in-one-window/">Tasks and timer in one window</a></li>
+        <li><a href="/adwait-vs-todoist/">Adwait vs Todoist + a pomodoro timer</a></li>
+      </ul>
+    </main>
+
+    <footer class="foot">
+      <div class="foot-inner">
+        <span>Adwait — local-first tasks and pomodoro. No account, no server.</span>
+        <a href="/">Open the app</a>
+      </div>
+    </footer>
+  </body>
+</html>

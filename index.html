@@ -4,18 +4,231 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fafaf9" />
+    <meta name="robots" content="index,follow" />
+    <title>Adwait — Local-First Pomodoro Timer + Task List, No Account</title>
     <meta
       name="description"
-      content="Adwait — your day, undivided. Tasks and pomodoro focus in one pane."
+      content="A single pane for today's tasks and a pomodoro timer. No signup, no server — your tasks and focus sessions stay in your browser. Free, with JSON export and import."
     />
+    <link rel="canonical" href="https://adwait-app.netlify.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Adwait" />
+    <meta property="og:url" content="https://adwait-app.netlify.app/" />
+    <meta
+      property="og:title"
+      content="Adwait — tasks and a pomodoro timer in one pane"
+    />
+    <meta
+      property="og:description"
+      content="Your day, undivided. Today's tasks on the left, a focus timer on the right. No account, no server, no ads."
+    />
+    <meta property="og:image" content="https://adwait-app.netlify.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="The Adwait app: a task list with colour-coded due dates beside a pomodoro timer."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Adwait — tasks and a pomodoro timer in one pane"
+    />
+    <meta
+      name="twitter:description"
+      content="Your day, undivided. No account, no server, no ads — your data stays in your browser."
+    />
+    <meta name="twitter:image" content="https://adwait-app.netlify.app/og.png" />
+
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍅</text></svg>"
     />
-    <title>Adwait</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Adwait",
+        "alternateName": "Adwait — your day, undivided",
+        "applicationCategory": "ProductivityApplication",
+        "applicationSubCategory": "Pomodoro timer and task list",
+        "operatingSystem": "Any modern web browser",
+        "url": "https://adwait-app.netlify.app/",
+        "description": "A single-pane productivity app: today's tasks on the left, a pomodoro timer on the right. Local-first — no account, no server, no ads.",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Pomodoro timer with focus, short break, and long break modes",
+          "Task list with buckets and drag-to-reorder",
+          "Colour-coded on-track status from due dates",
+          "Focus sessions logged per task",
+          "Local-first storage with JSON export and import",
+          "No account required"
+        ],
+        "screenshot": "https://adwait-app.netlify.app/og.png"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <noscript>
+      <p
+        style="
+          max-width: 760px;
+          margin: 24px auto;
+          padding: 0 24px;
+          font-family: system-ui, sans-serif;
+        "
+      >
+        Adwait needs JavaScript to run the task list and timer. The explanation
+        below works without it.
+      </p>
+    </noscript>
+
+    <!--
+      Static, always-visible product copy. This is real content for readers and
+      crawlers, not keyword padding: it explains what the app is and links to the
+      long-form pages. React mounts into #root above it.
+    -->
+    <section
+      aria-labelledby="about-adwait"
+      class="border-t border-stone-200 bg-stone-50"
+    >
+      <div class="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+          <div>
+            <h2
+              id="about-adwait"
+              class="text-base font-semibold tracking-tight text-stone-900"
+            >
+              What is Adwait?
+            </h2>
+            <p class="mt-3 max-w-xl text-sm leading-relaxed text-stone-600">
+              Adwait is a free, local-first pomodoro timer and task list in one
+              pane. Today's tasks sit on the left, colour-coded by whether
+              they're overdue, due today, or upcoming. The timer sits on the
+              right, and every focus session is logged against the day — and
+              against a task, if you want. There is no account and no server:
+              tasks, buckets, and sessions are stored in your browser, and you
+              can export a JSON backup at any time.
+            </p>
+            <p class="mt-3 max-w-xl text-sm leading-relaxed text-stone-600">
+              The name comes from Sanskrit <em>advaita</em> (अद्वैत), "not two" —
+              the work and the time spent on it are one.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-base font-semibold tracking-tight text-stone-900">
+              More about how it works
+            </h2>
+            <ul class="mt-3 space-y-2 text-sm leading-relaxed text-stone-600">
+              <li>
+                <a
+                  class="underline decoration-stone-300 underline-offset-2 hover:decoration-amber-600"
+                  href="/pomodoro-without-signup/"
+                  >A pomodoro timer with no signup</a
+                >
+              </li>
+              <li>
+                <a
+                  class="underline decoration-stone-300 underline-offset-2 hover:decoration-amber-600"
+                  href="/local-first-task-manager/"
+                  >What "local-first" means here</a
+                >
+              </li>
+              <li>
+                <a
+                  class="underline decoration-stone-300 underline-offset-2 hover:decoration-amber-600"
+                  href="/pomodoro-and-todo-list-in-one-window/"
+                  >Tasks and timer in one window</a
+                >
+              </li>
+              <li>
+                <a
+                  class="underline decoration-stone-300 underline-offset-2 hover:decoration-amber-600"
+                  href="/adwait-vs-pomofocus/"
+                  >Adwait vs Pomofocus</a
+                >
+              </li>
+              <li>
+                <a
+                  class="underline decoration-stone-300 underline-offset-2 hover:decoration-amber-600"
+                  href="/adwait-vs-todoist/"
+                  >Adwait vs Todoist + a timer</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-10 max-w-2xl">
+          <h2 class="text-base font-semibold tracking-tight text-stone-900">
+            Common questions
+          </h2>
+          <div class="mt-3 divide-y divide-stone-200 border-y border-stone-200">
+            <details class="group py-3">
+              <summary
+                class="cursor-pointer text-sm font-medium text-stone-900"
+              >
+                Is Adwait really free?
+              </summary>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">
+                Yes. The app is free to use, has no ads, and requires no
+                account. There is nothing to upgrade to and no trial that
+                expires.
+              </p>
+            </details>
+            <details class="group py-3">
+              <summary
+                class="cursor-pointer text-sm font-medium text-stone-900"
+              >
+                Where is my data stored?
+              </summary>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">
+                In this browser's <code>localStorage</code>, under the key
+                <code>adwait:v1</code>. Nothing is sent to a server. Export a
+                JSON backup from the header now and then, and import it on
+                another machine or browser when you need to move.
+              </p>
+            </details>
+            <details class="group py-3">
+              <summary
+                class="cursor-pointer text-sm font-medium text-stone-900"
+              >
+                Does the timer keep running if I close the tab?
+              </summary>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">
+                The timer stores an end timestamp rather than counting down, so
+                it stays accurate through refreshes, background tabs, and sleep.
+                If a session finishes while the tab is closed, it is recorded
+                once when you come back.
+              </p>
+            </details>
+            <details class="group py-3">
+              <summary
+                class="cursor-pointer text-sm font-medium text-stone-900"
+              >
+                Can I use it on my phone?
+              </summary>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">
+                It works in a mobile browser, but the layout is designed for a
+                desktop screen. There is no native app and no sync between
+                devices — use export and import to move data.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

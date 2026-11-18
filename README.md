@@ -2,7 +2,7 @@
 
 **Your day, undivided.**
 
-[**Live demo**](https://adwait-app.netlify.app) · [Source on GitHub](https://github.com/ShrikantJadhav/Adwait)
+[**Live demo**](https://adwait-app.netlify.app/?utm_source=github&utm_medium=readme&utm_campaign=repo) · [Source on GitHub](https://github.com/ShrikantJadhav/Adwait)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ShrikantJadhav/Adwait)
 
@@ -84,4 +84,13 @@ Vite · React 19 · TypeScript · Tailwind CSS v4 · Zustand · date-fns · Web 
 - **Phase 3:** estimate-aware at-risk colors, undo, stats/streaks, daily goal, PWA/offline, keyboard shortcuts, settings, accessibility pass.
 - **Phase 4:** optional accounts and sync.
 
-See [PLAN.md](./PLAN.md) for the full spec, data model, and acceptance criteria.
+## Discoverability
+
+The app page carries real, static product copy (and an FAQ) below the app, so
+crawlers see something other than an empty `#root`. Long-form pages live in
+[`public/`](./public) as plain HTML with no JavaScript — no signup, local-first,
+single-pane, and two honest comparisons — and are listed in
+[`sitemap.xml`](./public/sitemap.xml). `robots.txt` allows everything.
+
+[`docs/promotion.md`](./docs/promotion.md) has the UTM-tagged link for each
+channel and the order to post them in.

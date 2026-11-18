@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafaf9" />
+    <title>Pomodoro Timer and Todo List in One Window | Adwait</title>
+    <meta
+      name="description"
+      content="Stop juggling a task app, a timer tab, and a spreadsheet. Adwait puts today's tasks and a pomodoro timer in one pane, and logs every focus session against the task you were working on."
+    />
+    <link rel="canonical" href="https://adwait-app.netlify.app/pomodoro-and-todo-list-in-one-window/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://adwait-app.netlify.app/pomodoro-and-todo-list-in-one-window/" />
+    <meta property="og:title" content="Tasks and a pomodoro timer in one window" />
+    <meta
+      property="og:description"
+      content="One pane: today's tasks on the left, a focus timer on the right, time spent rolled up per task."
+    />
+    <meta property="og:image" content="https://adwait-app.netlify.app/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍅</text></svg>"
+    />
+    <link rel="stylesheet" href="/landing.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">अ</span>
+          <span class="brand-name">Adwait<span class="brand-tag">Your day, undivided.</span></span>
+        </a>
+        <a class="nav-link" href="/?utm_source=site&amp;utm_medium=nav&amp;utm_campaign=single-pane">Open the app →</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <p class="eyebrow">One pane</p>
+      <h1>Your todo list and pomodoro timer, in one window</h1>
+      <p class="lede">
+        The usual setup is a task app, a timer in another tab, and a vague sense
+        afterwards of where the afternoon went. Adwait collapses that into one
+        screen and makes the link explicit: every focus session belongs to a
+        task.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="/?utm_source=site&amp;utm_medium=cta&amp;utm_campaign=single-pane">See it with demo data</a>
+        <span class="note">Import the demo backup to see a full day.</span>
+      </div>
+
+      <h2>What three tabs actually cost</h2>
+      <p>
+        A timer in a background tab is a tab you can't see. You start a session,
+        go back to work, and either forget it ended or lose track of which task it
+        belonged to. Then the honest accounting is gone: at the end of the week
+        you know you were busy, not what consumed the time.
+      </p>
+      <p>
+        Putting the timer next to the list fixes two small things that compound:
+        you pick the task <em>before</em> the session instead of writing it down
+        after, and the timer stays visible while you work because it's part of the
+        same view.
+      </p>
+
+      <h2>How the single pane is laid out</h2>
+      <ul>
+        <li>
+          <strong>Left: today.</strong> Overdue, due today, pinned, Later, and
+          done-today groups, with bucket chips showing where each task lives and
+          colour-coded due dates (red overdue, amber today, green upcoming).
+        </li>
+        <li>
+          <strong>Right: the timer.</strong> Focus, short break, long break; the
+          task you're working on; start, pause, resume, cancel.
+        </li>
+        <li>
+          <strong>Buckets.</strong> Projects (Work, Personal, Finance…) each get a
+          view with their own tasks and total focus time. Drag to reorder inside a
+          bucket, or drop a task onto another bucket tab to move it.
+        </li>
+      </ul>
+
+      <h2>What gets logged</h2>
+      <p>
+        Each finished session records a start time, an end time, and a duration,
+        and is linked to the task it was started against. Time-taken on a task is
+        the sum of its completed sessions — not an estimate, not a guess. Sessions
+        started without a task can be attached to one afterwards, so a stray
+        20-minute block isn't lost. Cancelled sessions are logged as cancelled and
+        kept out of the main total.
+      </p>
+
+      <h2>When Adwait is the wrong tool</h2>
+      <p>
+        If you need a team to see the list, reminders on your phone, or calendar
+        integration, this isn't it. There's no sharing, no sync, no notifications
+        outside the browser, and no mobile app. Adwait is deliberately a
+        single-person, single-machine tool. The value is the focus, not the
+        coverage.
+      </p>
+
+      <h2>Keep reading</h2>
+      <ul>
+        <li><a href="/pomodoro-without-signup/">A pomodoro timer with no signup</a></li>
+        <li><a href="/adwait-vs-pomofocus/">Adwait vs Pomofocus</a></li>
+        <li><a href="/adwait-vs-todoist/">Adwait vs Todoist + a pomodoro timer</a></li>
+      </ul>
+    </main>
+
+    <footer class="foot">
+      <div class="foot-inner">
+        <span>Adwait — local-first tasks and pomodoro. No account, no server.</span>
+        <a href="/">Open the app</a>
+      </div>
+    </footer>
+  </body>
+</html>

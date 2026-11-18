@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafaf9" />
+    <title>Pomodoro Timer Without Signup — Free, No Account, No Ads | Adwait</title>
+    <meta
+      name="description"
+      content="Use a full pomodoro timer without creating an account. Adwait runs in your browser, keeps your task list and focus sessions on your machine, and never asks for an email address."
+    />
+    <link rel="canonical" href="https://adwait-app.netlify.app/pomodoro-without-signup/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://adwait-app.netlify.app/pomodoro-without-signup/" />
+    <meta property="og:title" content="A pomodoro timer with no signup" />
+    <meta
+      property="og:description"
+      content="No account, no email, no server. A pomodoro timer and task list that stay in your browser."
+    />
+    <meta property="og:image" content="https://adwait-app.netlify.app/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍅</text></svg>"
+    />
+    <link rel="stylesheet" href="/landing.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">अ</span>
+          <span class="brand-name">Adwait<span class="brand-tag">Your day, undivided.</span></span>
+        </a>
+        <a class="nav-link" href="/?utm_source=site&amp;utm_medium=nav&amp;utm_campaign=pomodoro-without-signup">Open the app →</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <p class="eyebrow">Pomodoro, no account</p>
+      <h1>A pomodoro timer with no signup</h1>
+      <p class="lede">
+        Most pomodoro apps want an email address before you can start a
+        25-minute session. Adwait doesn't. Open the page, pick a task, press
+        start — your tasks and sessions stay in your browser.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="/?utm_source=site&amp;utm_medium=cta&amp;utm_campaign=pomodoro-without-signup">Start a session — free</a>
+        <span class="note">No account. No server. No ads.</span>
+      </div>
+
+      <h2>Why do pomodoro apps ask you to sign up?</h2>
+      <p>
+        Because their data lives on a server, and a server needs a way to know
+        whose data is whose. An account is the standard answer: it enables sync,
+        billing, and analytics, and it gives the company a way to email you.
+        That's a reasonable trade for some products. For a timer, it's mostly
+        friction — you wanted to start working, not manage a login.
+      </p>
+      <p>
+        Adwait takes the other route. There is no database and no API. The app is
+        a static bundle; your tasks, buckets, and focus sessions are written to
+        this browser's local storage. There's nothing to sign into because
+        there's no "you" on our side.
+      </p>
+
+      <h2>What you get without an account</h2>
+      <ul>
+        <li><strong>Focus, short break, and long break</strong> modes on the standard 25 / 5 / 15 cycle.</li>
+        <li><strong>Start, pause, resume, and cancel</strong> — cancelled time is logged as cancelled, not counted as focus.</li>
+        <li><strong>A task list beside the timer</strong> so the session attaches to a specific piece of work.</li>
+        <li><strong>Colour-coded due dates</strong>: red for overdue, amber for today, green for later.</li>
+        <li><strong>Time-taken per task</strong>, rolled up from completed sessions.</li>
+        <li><strong>JSON export and import</strong>, so "no server" doesn't mean "no backup".</li>
+      </ul>
+
+      <h2>Does the timer survive a refresh or a sleeping laptop?</h2>
+      <p>
+        Yes, and it's the part most timers get wrong. Adwait doesn't decrement a
+        counter — it stores the timestamp when the session ends and recomputes
+        the remainder every 250&nbsp;ms. Refreshing, switching tabs, or closing
+        the lid doesn't drift the timer. If a session finishes while the tab is
+        closed, it's recorded exactly once the next time you open the app.
+      </p>
+
+      <div class="card">
+        <h2>The honest catch</h2>
+        <p>
+          Local-first means one browser, not every device. There's no sync
+          between your laptop and your phone, and clearing site data will clear
+          your tasks. That's why export exists: download a JSON backup, keep it
+          somewhere you trust, and import it when you move. If you need automatic
+          sync across devices, a cloud app is the better fit — and Adwait isn't
+          pretending otherwise.
+        </p>
+      </div>
+
+      <h2>Questions</h2>
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. No ads, no trial, no paid tier, no email capture.</p>
+      </details>
+      <details>
+        <summary>Do I need to install anything?</summary>
+        <p>No. It's a web app. There's no native app and no extension.</p>
+      </details>
+      <details>
+        <summary>Can I change the 25 / 5 lengths?</summary>
+        <p>
+          Not yet. The timer uses 25-minute focus blocks, 5-minute short breaks,
+          and a 15-minute long break after every four focus sessions. Making the
+          lengths adjustable is on the roadmap, not in the app today.
+        </p>
+      </details>
+      <details>
+        <summary>What happens to my data if I clear my browser?</summary>
+        <p>
+          It's gone, unless you exported a backup. Export first, or at least
+          before clearing site data.
+        </p>
+      </details>
+
+      <h2>Keep reading</h2>
+      <ul>
+        <li><a href="/local-first-task-manager/">What "local-first" means in practice</a></li>
+        <li><a href="/pomodoro-and-todo-list-in-one-window/">Tasks and timer in one window</a></li>
+        <li><a href="/adwait-vs-pomofocus/">Adwait vs Pomofocus</a></li>
+      </ul>
+    </main>
+
+    <footer class="foot">
+      <div class="foot-inner">
+        <span>Adwait — local-first tasks and pomodoro. No account, no server.</span>
+        <a href="/">Open the app</a>
+      </div>
+    </footer>
+  </body>
+</html>
